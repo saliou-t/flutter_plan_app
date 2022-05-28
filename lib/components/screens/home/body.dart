@@ -1,6 +1,7 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:planapp/constants.dart';
 // import 'package:planapp/constants.dart';
 
@@ -52,7 +53,8 @@ class Body extends StatelessWidget {
                         color: kPrimaryColor.withOpacity(0.5),
                       ),
                       enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none
+                      focusedBorder: InputBorder.none,
+                      suffixIcon: SvgPicture.asset("/home/cheikh/Bureau/udemy/planapp/assets/icones/search.svg")
                     ),
                   ),
                 )
