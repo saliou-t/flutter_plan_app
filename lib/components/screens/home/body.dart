@@ -1,5 +1,3 @@
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:planapp/components/screens/home/header_with_search.dart';
 import 'package:planapp/constants.dart';
@@ -15,17 +13,37 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Header(),
+          TitleWithCustumLine(
+            text: "Recommendation"
+          )
+        ],
+      ),
+    );
+  }
+}
+
+//vue qu'on utilise souvant le titre souligner, on crée une fonction pour éviter la rpétition.
+class TitleWithCustumLine extends StatelessWidget {
+  const TitleWithCustumLine(
+    {Key? key,
+    
+  ) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: <Widget>[
           Container(
             height: 24,
             child: Stack(
               children: <Widget>[
-                Text(
-                  "Recommendation", 
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
+                Padding(
+                  padding: const EdgeInsets.only(left: kDefaultPadding /4)
                 ),
-                Container(
-                  height: 7,
-                  color: kPrimaryColor
+                Text(
+                  text, 
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
