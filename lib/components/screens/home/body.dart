@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planapp/components/screens/home/header_with_search.dart';
+import 'package:planapp/components/screens/home/plante_recommended.dart';
 import 'package:planapp/components/screens/home/title_with_more_btn.dart';
+import 'package:planapp/constants.dart';
 // import 'package:planapp/constants.dart';
 
 class Body extends StatelessWidget {
@@ -13,7 +15,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Header(),
-          TextWithBtnMore(title: 'jklm', press: (){}),
+          TextWithBtnMore(title: 'Nos recomandations', press: (){}),
+          PlantRecommanded(size: size)
         ],
       ),
     );
