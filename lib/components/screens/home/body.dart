@@ -1,8 +1,6 @@
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:planapp/components/screens/home/header_with_search.dart';
-import 'package:planapp/constants.dart';
+import 'package:planapp/components/screens/home/title_with_more_btn.dart';
 // import 'package:planapp/constants.dart';
 
 class Body extends StatelessWidget {
@@ -15,23 +13,9 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Header(),
-          Container(
-            height: 24,
-            child: Stack(
-              children: <Widget>[
-                Text(
-                  "Recommendation", 
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
-                ),
-                Container(
-                  height: 7,
-                  color: kPrimaryColor
-                ),
-              ],
-            ),
-          )
+          TextWithBtnMore(title: 'jklm', press: (){}),
         ],
-      ),    
+      ),
     );
   }
 }
