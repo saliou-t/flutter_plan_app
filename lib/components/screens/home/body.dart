@@ -16,7 +16,17 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Header(),
           TextWithBtnMore(title: 'Nos recomandations', press: (){}),
-          PlantRecommanded(size: size, contry: 'Sénégal', price: '\$500', titleImage: 'Santanara', imagePath: '/home/cheikh/Bureau/udemy/planapp/assets/images/planta1.jpg', press: (){},)
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child:Row(
+              children: <Widget>[
+                PlantRecommanded(size: size, contry: 'Sénégal', price: '\$500', titleImage: 'Santanara', imagePath: '/home/cheikh/Bureau/udemy/planapp/assets/images/planta1.jpg', press: (){},),
+                PlantRecommanded(size: size, contry: 'Sénégal', price: '\$500', titleImage: 'Santanara', imagePath: '/home/cheikh/Bureau/udemy/planapp/assets/images/planta1.jpg', press: (){},),
+                PlantRecommanded(size: size, contry: 'Sénégal', price: '\$500', titleImage: 'Santanara', imagePath: '/home/cheikh/Bureau/udemy/planapp/assets/images/planta1.jpg', press: (){},),
+              ],
+            ) ,
+          )  
+          
         ],
       ),
     );
