@@ -13,9 +13,13 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Header(),
-          TitleWithCustumLine(
-            text: "Recommendation"
-          )
+          Row(
+            children: <Widget>[
+              TitleWithCustumLine(
+                text: "Recommandé pour vous"
+              )
+            ],
+          ),
         ],
       ),
     );
@@ -25,9 +29,11 @@ class Body extends StatelessWidget {
 //vue qu'on utilise souvant le titre souligner, on crée une fonction pour éviter la rpétition.
 class TitleWithCustumLine extends StatelessWidget {
   const TitleWithCustumLine(
-    {Key? key,
+    {Key? key, required this.text,}
     
   ) : super(key: key);
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
