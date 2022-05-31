@@ -20,14 +20,18 @@ class TextWithBtnMore extends StatelessWidget {
           TitleWithCustumLine(text: title),
           Spacer(),
           TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: kPrimaryColor,
-                primary: Colors.white, // foreground
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-              ),
-              onPressed: press(),
-              child: Text("Plus"))
+            style: TextButton.styleFrom(
+              backgroundColor: kPrimaryColor,
+              primary: Colors.white, // foreground
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+            ),
+            onPressed: press(),
+            child: Text(
+              "Plus",
+              style: TextStyle(color: Colors.white),
+            )
+          )
         ],
       ),
     );
