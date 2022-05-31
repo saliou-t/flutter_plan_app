@@ -17,6 +17,16 @@ class Body extends StatelessWidget {
           TextWithBtnMore(title: 'Nos recomandations', press: (){}),
           Recomanded(size: size) , 
           TextWithBtnMore(title: 'Future plantes', press: (){}),
+          Container(
+            width: size.width * 0.8,
+            height: 185,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage("")
+              ),
+            ),
+          )
         ],
       ),
     );
